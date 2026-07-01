@@ -1,26 +1,146 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-outfit);
+  --font-heading: var(--font-outfit);
 
-@theme inline {
+  /* Light Cozy Green Palette */
+  --color-primary-50: #f7fdf9;
+  --color-primary-100: #eaf8f0;
+  --color-primary-200: #d1efe0;
+  --color-primary-300: #a9e0c5;
+  --color-primary-400: #7acaa4;
+  --color-primary-500: #54b086;
+  --color-primary-600: #3f8f6b;
+  --color-primary-700: #337357;
+  --color-primary-800: #2b5c46;
+  --color-primary-900: #244c3b;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #FEFDF9;
+  --foreground: #252A26;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+@keyframes blur-fade-in {
+  0% { 
+    opacity: 0;
+    filter: blur(24px);
+    transform: scale(1.02);
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+@keyframes slow-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-hero-bg {
+  opacity: 0;
+  animation: slow-fade-in 2s ease-out forwards;
+}
+
+.animate-hero-fg {
+  opacity: 0;
+  animation: blur-fade-in 2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards;
+}
+
+@keyframes object-scroll {
+  0%, 10% { object-position: top; }
+  70%, 80% { object-position: bottom; }
+  90%, 100% { object-position: top; }
+}
+
+.animate-object-scroll {
+  animation: object-scroll 24s ease-in-out infinite;
+}
+
+@keyframes fake-scrollbar-thumb {
+  0%, 10% { top: 4px; }
+  70%, 80% { top: calc(100% - 68px); }
+  90%, 100% { top: 4px; }
+}
+
+.animate-fake-scrollbar {
+  animation: fake-scrollbar-thumb 24s ease-in-out infinite;
+}
+
+@keyframes auto-mouse {
+  0% { opacity: 0; transform: translate(-30px, 30px) scale(1); }
+  5% { opacity: 1; transform: translate(0, 0) scale(1); }
+  10% { transform: translate(0, 0) scale(0.85); }
+  90% { transform: translate(0, 0) scale(0.85); }
+  95% { transform: translate(0, 0) scale(1); opacity: 1; }
+  100% { opacity: 0; transform: translate(-30px, 30px) scale(1); }
+}
+
+.animate-auto-mouse {
+  animation: auto-mouse 24s ease-in-out infinite;
+}
+
+@font-face {
+  font-family: 'mooxy';
+  src: url('/fonts/mooxy.ttf') format('truetype');
+}
+
+/* ──────────────────────────────────────────────────────────── */
+/* SaaS Interactive Calendar Animations */
+/* ──────────────────────────────────────────────────────────── */
+
+@keyframes saas-camera {
+  0%, 15% { transform: scale(1); transform-origin: center right; }
+  25%, 85% { transform: scale(1.15); transform-origin: center right; }
+  95%, 100% { transform: scale(1); transform-origin: center right; }
+}
+
+@keyframes saas-cursor {
+  0%, 5% { transform: translate(50px, 150px); }
+  20%, 30% { transform: translate(160px, 60px); } /* Hover on block edge */
+  30%, 40% { transform: translate(160px, 60px) scale(0.9); } /* Click down */
+  40%, 65% { transform: translate(320px, 60px) scale(0.9); } /* Dragging right */
+  65%, 70% { transform: translate(320px, 60px) scale(1); } /* Release */
+  75%, 90% { transform: translate(350px, 150px); } /* Move away */
+  95%, 100% { transform: translate(50px, 150px); }
+}
+
+@keyframes saas-block {
+  0%, 40% { width: 80px; }
+  40%, 65% { width: 240px; }
+  65%, 90% { width: 240px; }
+  95%, 100% { width: 80px; } /* Reset quickly at end */
+}
+
+@keyframes saas-toast {
+  0%, 65% { opacity: 0; transform: translateY(10px) scale(0.95); }
+  70%, 85% { opacity: 1; transform: translateY(0) scale(1); }
+  90%, 100% { opacity: 0; transform: translateY(10px) scale(0.95); }
+}
+
+.animate-saas-camera { animation: saas-camera 8s ease-in-out infinite; }
+.animate-saas-cursor { animation: saas-cursor 8s ease-in-out infinite; }
+.animate-saas-block { animation: saas-block 8s ease-in-out infinite; }
+.animate-saas-toast { animation: saas-toast 8s ease-in-out infinite; }
