@@ -6,7 +6,7 @@ export function Pricing() {
     {
       name: "Básico",
       description: "Ideal para recintos que recién comienzan.",
-      price: "$29",
+      price: "$29.990",
       period: "/mes",
       features: [
         "Calendario",
@@ -21,7 +21,7 @@ export function Pricing() {
     {
       name: "Pro",
       description: "Para recintos que necesitan control total.",
-      price: "$79",
+      price: "$79.990",
       period: "/mes",
       features: [
         "Todo lo del plan Básico",
@@ -36,7 +36,7 @@ export function Pricing() {
     {
       name: "Enterprise",
       description: "La solución para operaciones de alto volumen.",
-      price: "$199",
+      price: "$199.990",
       period: "/mes",
       features: [
         "Todo lo del plan Pro",
