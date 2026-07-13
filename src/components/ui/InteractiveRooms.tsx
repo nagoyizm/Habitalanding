@@ -102,9 +102,9 @@ export function InteractiveRooms() {
               <div className="font-heading font-bold text-lg" style={{ color: '#0f172a' }}>Estado de Habitaciones</div>
             </div>
             
-            <div className="flex gap-3 pb-1">
+            <div className="grid grid-cols-4 gap-3 pb-1">
               {/* Ocupación */}
-              <div className="flex-shrink-0 w-[140px] bg-white p-3 rounded-xl border shadow-sm" style={{ borderColor: '#e2e8f0' }}>
+              <div className="bg-white p-3 rounded-xl border shadow-sm" style={{ borderColor: '#e2e8f0' }}>
                  <div className="text-[10px] font-bold text-slate-500 mb-1 tracking-wide">OCUPACIÓN</div>
                  <div className="text-2xl font-black" style={{ color: '#0f172a' }}>25%</div>
                  <div className="w-full bg-slate-100 h-1.5 mt-2 rounded-full overflow-hidden">
@@ -113,7 +113,7 @@ export function InteractiveRooms() {
               </div>
               
               {/* Listas */}
-              <div className="flex-shrink-0 w-[140px] p-3 rounded-xl border shadow-sm transition-colors duration-500" style={{ borderColor: isClean ? '#a7f3d0' : '#e2e8f0', background: isClean ? '#f0fdf4' : 'white' }}>
+              <div className="p-3 rounded-xl border shadow-sm transition-colors duration-500" style={{ borderColor: isClean ? '#a7f3d0' : '#e2e8f0', background: isClean ? '#f0fdf4' : 'white' }}>
                  <div className="text-[10px] font-bold flex items-center gap-1.5 mb-1 tracking-wide transition-colors duration-500" style={{ color: isClean ? '#047857' : '#64748b' }}>
                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 
                    LISTAS
@@ -124,7 +124,7 @@ export function InteractiveRooms() {
               </div>
               
               {/* Sin limpieza */}
-              <div className="flex-shrink-0 w-[140px] p-3 rounded-xl border shadow-sm transition-colors duration-500" style={{ borderColor: !isClean ? '#fca5a5' : '#e2e8f0', background: !isClean ? '#fef2f2' : 'white' }}>
+              <div className="p-3 rounded-xl border shadow-sm transition-colors duration-500" style={{ borderColor: !isClean ? '#fca5a5' : '#e2e8f0', background: !isClean ? '#fef2f2' : 'white' }}>
                  <div className="text-[10px] font-bold flex items-center gap-1.5 mb-1 tracking-wide transition-colors duration-500" style={{ color: !isClean ? '#b91c1c' : '#64748b' }}>
                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 
                    SIN LIMPIEZA
@@ -135,7 +135,7 @@ export function InteractiveRooms() {
               </div>
 
               {/* Urgencias */}
-              <div className="flex-shrink-0 w-[140px] p-3 rounded-xl border shadow-sm" style={{ borderColor: '#fca5a5', background: '#fef2f2' }}>
+              <div className="p-3 rounded-xl border shadow-sm" style={{ borderColor: '#fca5a5', background: '#fef2f2' }}>
                  <div className="text-[10px] font-bold flex items-center gap-1.5 mb-1 tracking-wide" style={{ color: '#b91c1c' }}>
                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 
                    URGENCIAS
