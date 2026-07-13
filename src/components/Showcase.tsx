@@ -3,13 +3,14 @@ import { AnimatedSection } from "./ui/AnimatedSection";
 import { InteractiveCalendar } from "./ui/InteractiveCalendar";
 import { InteractiveFinances } from "./ui/InteractiveFinances";
 import { InteractiveRooms } from "./ui/InteractiveRooms";
+import { ScaledAnimation } from "./ui/ScaledAnimation";
 
 export function Showcase() {
   const sections = [
     {
       title: "Calendario Visual e Intuitivo",
       description: "Despídete de las hojas de cálculo confusas y el caos de las reservas dobles. Nuestro Calendario te permite visualizar y gestionar toda la disponibilidad de tus habitaciones con un simple vistazo. Arrastra, suelta y organiza con total libertad en una interfaz diseñada para ser rápida y sin fricción.",
-      component: <InteractiveCalendar />,
+      component: <ScaledAnimation><InteractiveCalendar /></ScaledAnimation>,
       image: "/images/calendar_ui.png",
       alt: "Interfaz del calendario",
       reversed: false,
@@ -21,7 +22,7 @@ export function Showcase() {
     {
       title: "Control Financiero Total",
       description: "Toma el control de la salud financiera de tu negocio con reportes detallados en tiempo real. Visualiza ingresos, pagos pendientes y proyecciones de ocupación, todo en gráficos claros que te permiten tomar mejores decisiones para maximizar tus ganancias.",
-      component: <InteractiveFinances />,
+      component: <ScaledAnimation><InteractiveFinances /></ScaledAnimation>,
       reversed: true,
       benefits: [
         "Métricas de ocupación y RevPAR automáticas",
@@ -31,7 +32,7 @@ export function Showcase() {
     {
       title: "Gestión de Limpieza",
       description: "Mantén a tu equipo de limpieza sincronizado y tus habitaciones siempre listas. Identifica rápidamente qué cabañas necesitan aseo, marca prioridades y actualiza el estado en tiempo real. Un flujo de trabajo fluido que garantiza la mejor experiencia para tus huéspedes.",
-      component: <InteractiveRooms />,
+      component: <ScaledAnimation><InteractiveRooms /></ScaledAnimation>,
       reversed: false,
       benefits: [
         "Actualización de estados en tiempo real",
