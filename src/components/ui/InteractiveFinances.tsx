@@ -145,7 +145,7 @@ export function InteractiveFinances() {
   let mouseY = 100;
   let clickScale = 1;
 
-  const buttonX = [152, 236, 320, 404]; // absolute pixel X pos of the tabs on desktop
+  const buttonX = [141, 225, 309, 393]; // pixel X center of each tab (px-6 toolbar, 84px tabs)
   const buttonY = 24; // Y pos of tabs (relative to outermost wrapper)
 
   // Helper to animate mouse for a specific phase (25% chunk)
@@ -178,16 +178,16 @@ export function InteractiveFinances() {
     <div className="relative w-full h-full overflow-hidden flex flex-col font-sans" style={{ backgroundColor: '#f4f9f9' }}>
       
       {/* Toolbar */}
-      <div className="h-12 border-b flex items-center justify-between px-4 lg:px-6 shrink-0 shadow-sm relative z-10 bg-white" style={{ borderColor: '#e2e8f0' }}>
+      <div className="h-12 border-b flex items-center justify-between px-6 shrink-0 shadow-sm relative z-10 bg-white" style={{ borderColor: '#e2e8f0' }}>
         <div className="flex items-center gap-4">
           <div className="font-heading font-bold" style={{ color: '#0f172a' }}>Finanzas</div>
           
           {/* Tabs */}
           <div className="flex p-1 rounded-md" style={{ backgroundColor: '#f1f5f9' }}>
-             <div className={"w-[72px] lg:w-[84px] flex justify-center items-center py-1 text-[10px] lg:text-xs font-bold rounded " + (activeTab === 0 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Semana</div>
-             <div className={"w-[72px] lg:w-[84px] flex justify-center items-center py-1 text-[10px] lg:text-xs font-bold rounded " + (activeTab === 1 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Mes</div>
-             <div className={"w-[72px] lg:w-[84px] flex justify-center items-center py-1 text-[10px] lg:text-xs font-bold rounded " + (activeTab === 2 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Semestre</div>
-             <div className={"w-[72px] lg:w-[84px] flex justify-center items-center py-1 text-[10px] lg:text-xs font-bold rounded " + (activeTab === 3 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Año</div>
+             <div className={"w-[84px] flex justify-center items-center py-1 text-xs font-bold rounded " + (activeTab === 0 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Semana</div>
+             <div className={"w-[84px] flex justify-center items-center py-1 text-xs font-bold rounded " + (activeTab === 1 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Mes</div>
+             <div className={"w-[84px] flex justify-center items-center py-1 text-xs font-bold rounded " + (activeTab === 2 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Semestre</div>
+             <div className={"w-[84px] flex justify-center items-center py-1 text-xs font-bold rounded " + (activeTab === 3 ? 'bg-white text-emerald-700 shadow-sm' : 'text-slate-500')}>Año</div>
           </div>
         </div>
       </div>
@@ -204,69 +204,69 @@ export function InteractiveFinances() {
 
         return (
           <>
-            <div className="p-4 lg:p-6 flex flex-col gap-4 lg:gap-6 flex-1 overflow-hidden relative">
+            <div className="p-6 flex flex-col gap-6 flex-1 overflow-hidden relative">
         
         {/* KPI Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 shrink-0">
+        <div className="grid grid-cols-4 gap-4 shrink-0">
           {/* Mejor Semana */}
           <div className="rounded-xl border bg-white p-3 flex flex-col gap-1 shadow-sm transition-all" style={{ borderColor: '#fde68a' }}>
-            <div className="text-[9px] lg:text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#b45309' }}>
+            <div className="text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#b45309' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15v5s-2 2-2 2c0 0-2-2-2-2v-5"/><path d="M14 15v5s2 2 2 2c0 0 2-2 2-2v-5"/><circle cx="12" cy="9" r="4"/></svg>
               Mejor Semana
             </div>
-            <div className="text-base lg:text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
+            <div className="text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
               {formatCLP(currentSemana)}
             </div>
-            <div className="text-[9px] lg:text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
+            <div className="text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
               {t > 0.5 ? s2.bestWeekDate : s1.bestWeekDate}
             </div>
           </div>
 
           {/* Mejor Día */}
           <div className="rounded-xl border bg-white p-3 flex flex-col gap-1 shadow-sm transition-all" style={{ borderColor: '#a7f3d0' }}>
-            <div className="text-[9px] lg:text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#047857' }}>
+            <div className="text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#047857' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               Mejor Día
             </div>
-            <div className="text-base lg:text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
+            <div className="text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
               {formatCLP(currentDia)}
             </div>
-            <div className="text-[9px] lg:text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
+            <div className="text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
               {t > 0.5 ? s2.bestDayDate : s1.bestDayDate}
             </div>
           </div>
 
           {/* Día Más Débil */}
           <div className="rounded-xl border bg-white p-3 flex flex-col gap-1 shadow-sm transition-all" style={{ borderColor: '#fecaca' }}>
-            <div className="text-[9px] lg:text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#991b1b' }}>
+            <div className="text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#991b1b' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline><polyline points="16 17 22 17 22 11"></polyline></svg>
               Día Más Débil
             </div>
-            <div className="text-base lg:text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
+            <div className="text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
               {formatCLP(currentDebil)}
             </div>
-            <div className="text-[9px] lg:text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
+            <div className="text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
               {t > 0.5 ? s2.weakDayDate : s1.weakDayDate}
             </div>
           </div>
 
           {/* Ocupación / RevPAR */}
           <div className="rounded-xl border bg-white p-3 flex flex-col gap-1 shadow-sm transition-all" style={{ borderColor: '#ddd6fe' }}>
-            <div className="text-[9px] lg:text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#4c1d95' }}>
+            <div className="text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1.5" style={{ color: '#4c1d95' }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
               Ocupación / RevPAR
             </div>
-            <div className="text-base lg:text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
+            <div className="text-lg font-black mt-1 truncate" style={{ color: '#0f172a' }}>
               {Math.floor(currentOcupacion)}%
             </div>
-            <div className="text-[9px] lg:text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
+            <div className="text-[10px] font-bold truncate" style={{ color: '#64748b' }}>
               {formatCLP(currentRevPar)} RevPAR
             </div>
           </div>
         </div>
 
         {/* Charts Container */}
-        <div className="flex-1 flex flex-col lg:flex-row gap-4 shrink-0 min-h-[220px]">
+        <div className="flex-1 flex flex-row gap-4 shrink-0 min-h-[220px]">
           
           {/* Main Area Chart (Evolución de Ingresos) */}
           <div className="rounded-xl border bg-white flex-[2] p-4 flex flex-col shadow-sm relative overflow-hidden" style={{ borderColor: '#e2e8f0' }}>

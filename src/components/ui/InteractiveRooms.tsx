@@ -97,12 +97,12 @@ export function InteractiveRooms() {
         <div className="w-full h-1/2 relative flex flex-col font-sans">
           
           {/* Header with KPIs */}
-          <div className="border-b px-4 lg:px-6 py-4 shrink-0 shadow-sm relative z-10 bg-white" style={{ borderColor: '#e2e8f0' }}>
+          <div className="border-b px-6 py-4 shrink-0 shadow-sm relative z-10 bg-white" style={{ borderColor: '#e2e8f0' }}>
             <div className="flex items-center gap-4 mb-4">
               <div className="font-heading font-bold text-lg" style={{ color: '#0f172a' }}>Estado de Habitaciones</div>
             </div>
             
-            <div className="flex gap-3 overflow-hidden pb-1 -mx-2 px-2 lg:mx-0 lg:px-0">
+            <div className="flex gap-3 pb-1">
               {/* Ocupación */}
               <div className="flex-shrink-0 w-[140px] bg-white p-3 rounded-xl border shadow-sm" style={{ borderColor: '#e2e8f0' }}>
                  <div className="text-[10px] font-bold text-slate-500 mb-1 tracking-wide">OCUPACIÓN</div>
@@ -148,7 +148,7 @@ export function InteractiveRooms() {
           </div>
 
           {/* Grid container */}
-          <div className="p-4 lg:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 flex-1 relative">
+          <div className="p-6 grid grid-cols-2 gap-4 flex-1 relative">
             
             {/* Room 1 (Occupied) */}
             <div className="rounded-xl border p-4 flex flex-col gap-3 shadow-sm bg-white" style={{ borderColor: '#fef08a', background: '#fefce8' }}>
@@ -219,7 +219,7 @@ export function InteractiveRooms() {
             </div>
 
             {/* Room 4 (Clean) */}
-            <div className="rounded-xl border p-4 flex flex-col gap-3 shadow-sm hidden md:flex bg-white" style={{ borderColor: '#a7f3d0', background: '#f0fdf4' }}>
+            <div className="rounded-xl border p-4 flex flex-col gap-3 shadow-sm bg-white" style={{ borderColor: '#a7f3d0', background: '#f0fdf4' }}>
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <span className="text-lg font-bold" style={{ color: '#047857' }}>Glamping Domo 1</span>
