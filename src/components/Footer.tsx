@@ -12,7 +12,7 @@ export function Footer() {
                 <Image src="/logo-habita-round.png" alt="Habita Logo" width={36} height={36} />
               </div>
               <span style={{ fontFamily: '"mooxy", sans-serif', fontSize: '24px', fontWeight: 800, color: '#252A26', letterSpacing: '0.15em', marginTop: '2px' }}>
-                habita
+                agendio
               </span>
             </Link>
             <p className="text-stone-600 max-w-sm mb-6 leading-relaxed">
