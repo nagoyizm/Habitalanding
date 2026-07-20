@@ -24,7 +24,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center">
-          <Link href="/login" className="bg-primary-600 hover:bg-primary-700 text-white text-sm font-bold px-6 py-2.5 rounded-xl transition-all active:scale-95 shadow-sm">
+          <Link href="http://app.agendio.cl/login" className="bg-primary-600 hover:bg-primary-700 text-white text-sm font-bold px-6 py-2.5 rounded-xl transition-all active:scale-95 shadow-sm">
             Iniciar Sesión
           </Link>
         </div>
