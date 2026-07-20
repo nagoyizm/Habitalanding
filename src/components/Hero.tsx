@@ -89,7 +89,7 @@ export function Hero() {
               <div className="relative aspect-[16/10] w-full bg-stone-50 overflow-hidden @container group/window">
                 <img 
                   src="/images/ui_dashboard_es.png"
-                  alt="Interfaz de Habita"
+                  alt="Interfaz de Agendio"
                   className="w-full h-full object-cover animate-object-scroll"
                 />
                 

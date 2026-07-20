@@ -8,7 +8,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Habita | Gestión Integral",
+  title: "Agendio | Gestión Integral",
   description: "Centraliza y maneja tu recinto facilmente",
 };
 
