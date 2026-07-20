@@ -8,7 +8,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Agendio | Gestión Integral",
+  title: "agendio | Gestión Integral",
   description: "Centraliza y maneja tu recinto facilmente",
 };
 

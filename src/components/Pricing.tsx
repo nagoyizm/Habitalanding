@@ -128,7 +128,7 @@ function PlanCard({ plan }: { plan: any }) {
       
       <div className="mb-6 min-h-[3rem] flex items-baseline gap-1">
         <span className="font-heading font-bold text-stone-900 text-4xl">
-          {plan.price}
+         
         </span>
         {plan.period && (
           <span className="text-stone-500 text-xs">
@@ -175,7 +175,7 @@ function WebPlanCard({ plan }: { plan: any }) {
         </p>
         <div className="flex items-baseline gap-1 mt-1">
           <span className="font-bold text-stone-700 text-sm md:text-base whitespace-normal">
-            {plan.price}
+            
           </span>
           {plan.period && (
             <span className="text-stone-500 text-xs">

@@ -56,7 +56,7 @@ export function Features() {
             Todo lo que necesitas para operar sin fricción
           </h2>
           <p className="text-base md:text-lg text-stone-700 font-medium">
-            Agendio está diseñado para eliminar el caos diario de la gestión de alojamientos, uniendo todas tus herramientas en un flujo de trabajo increíblemente suave.
+            agendio está diseñado para eliminar el caos diario de la gestión de alojamientos, uniendo todas tus herramientas en un flujo de trabajo increíblemente suave.
           </p>
         </AnimatedSection>
 
