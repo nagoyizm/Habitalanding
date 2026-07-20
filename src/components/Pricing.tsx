@@ -7,7 +7,7 @@ export function Pricing() {
       name: "Básico",
       description: "Ideal para recintos que recién comienzan.",
       price: "$29.990",
-      period: "",
+    
       features: [
         "Calendario",
         "Base de datos de clientes",
@@ -22,7 +22,7 @@ export function Pricing() {
       name: "Pro",
       description: "Para recintos que necesitan control total.",
       price: "$79.990",
-      period: "",
+    
       features: [
         "Todo lo del plan Básico",
         "Reportes avanzados",
@@ -37,7 +37,6 @@ export function Pricing() {
       name: "Enterprise",
       description: "La solución para operaciones de alto volumen.",
       price: "$199.990",
-      period: "",
       features: [
         "Todo lo del plan Pro",
         "Conexión Booking/Airbnb",
