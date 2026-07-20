@@ -130,12 +130,7 @@ function PlanCard({ plan }: { plan: any }) {
         <span className="font-heading font-bold text-stone-900 text-4xl">
          
         </span>
-        {plan.period && (
-          <span className="text-stone-500 text-xs">
-            {plan.period}
-          </span>
-        )}
-      </div>
+        
       
       <ul className="flex-1 space-y-3 mb-6">
         {plan.features.map((feature: string) => (
@@ -177,11 +172,7 @@ function WebPlanCard({ plan }: { plan: any }) {
           <span className="font-bold text-stone-700 text-sm md:text-base whitespace-normal">
             
           </span>
-          {plan.period && (
-            <span className="text-stone-500 text-xs">
-              {plan.period}
-            </span>
-          )}
+          
         </div>
       </div>
       
