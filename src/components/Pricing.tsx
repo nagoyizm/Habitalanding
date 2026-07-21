@@ -6,23 +6,18 @@ export function Pricing() {
     {
       name: "Básico",
       description: "Ideal para recintos que recién comienzan.",
-      price: "$29.990",
-    
       features: [
         "Calendario",
         "Base de datos de clientes",
-        "Hasta 12 habitaciones",
+        "Hasta 8 habitaciones",
         "Reportes básicos",
         "Soporte por email"
       ],
-      highlighted: false,
-      cta: "Comenzar gratis"
+      highlighted: false
     },
     {
       name: "Pro",
       description: "Para recintos que necesitan control total.",
-      price: "$79.990",
-    
       features: [
         "Todo lo del plan Básico",
         "Reportes avanzados",
@@ -30,37 +25,29 @@ export function Pricing() {
         "Manejo de limpieza",
         "Hasta 18 habitaciones"
       ],
-      highlighted: true,
-      cta: "Probar plan Pro"
+      highlighted: true
     },
     {
       name: "Enterprise",
       description: "La solución para operaciones de alto volumen.",
-      price: "$199.990",
       features: [
         "Todo lo del plan Pro",
         "Conexión Booking/Airbnb",
-        "Bot de WhatsApp",
         "Más de 20 habitaciones",
         "Soporte prioritario"
       ],
-      highlighted: false,
-      cta: "Contactar a ventas"
+      highlighted: false
     },
     {
       name: "Página Web",
       description: "Diseño de sitio web a medida para tu alojamiento.",
-      price: "Precio ajustado a tus necesidades",
-      period: "",
       features: [
         "Diseño responsivo",
-        "Motor de reservas",
         "Optimización SEO",
         "Hosting y dominio",
         "Mantenimiento"
       ],
-      highlighted: false,
-      cta: "Cotizar ahora"
+      highlighted: false
     }
   ];
 
@@ -125,13 +112,7 @@ function PlanCard({ plan }: { plan: any }) {
         </p>
       </div>
       
-      <div className="mb-6 min-h-[3rem] flex items-baseline gap-1">
-        <span className="font-heading font-bold text-stone-900 text-4xl">
-         
-        </span>
-        
-      
-      <ul className="flex-1 space-y-3 mb-6">
+      <ul className="flex-1 space-y-3 mb-6 mt-4">
         {plan.features.map((feature: string) => (
           <li key={feature} className="flex items-start gap-2">
             <Check className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${plan.highlighted ? 'text-primary-600' : 'text-primary-500'}`} />
@@ -141,16 +122,6 @@ function PlanCard({ plan }: { plan: any }) {
           </li>
         ))}
       </ul>
-      
-      <button 
-        className={`w-full rounded-xl font-bold transition-all active:scale-95 py-3 text-sm ${
-          plan.highlighted 
-            ? 'bg-primary-600 text-white hover:bg-primary-700' 
-            : 'bg-primary-50 text-primary-700 hover:bg-primary-100'
-        }`}
-      >
-        {plan.cta}
-      </button>
     </div>
   );
 }
@@ -167,12 +138,6 @@ function WebPlanCard({ plan }: { plan: any }) {
         <p className="text-stone-600 text-sm leading-snug mb-3 max-w-xs">
           {plan.description}
         </p>
-        <div className="flex items-baseline gap-1 mt-1">
-          <span className="font-bold text-stone-700 text-sm md:text-base whitespace-normal">
-            
-          </span>
-          
-        </div>
       </div>
       
       {/* Características (Grid 2 columnas) */}
@@ -187,13 +152,6 @@ function WebPlanCard({ plan }: { plan: any }) {
             </li>
           ))}
         </ul>
-      </div>
-
-      {/* Botón CTA */}
-      <div className="w-full md:w-auto shrink-0 mt-2 md:mt-0">
-        <button className="w-full md:w-48 rounded-xl font-bold transition-all active:scale-95 py-3 px-6 text-sm bg-primary-50 text-primary-700 hover:bg-primary-100">
-          {plan.cta}
-        </button>
       </div>
 
     </div>

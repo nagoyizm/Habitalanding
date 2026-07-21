@@ -10,7 +10,7 @@ export function Features() {
       imageAlt: "Vista del calendario"
     },
     {
-      title: "Base de Datos de Clientes",
+      title: "Bases de Datos",
       description: "Mantén un registro centralizado de todos tus huéspedes. Conoce sus preferencias, historial de visitas y mejora su experiencia con atención personalizada.",
       icon: <Users className="w-6 h-6 text-primary-300" />,
       imageAlt: "Gestión de clientes"
@@ -22,11 +22,11 @@ export function Features() {
       imageAlt: "Panel de analíticas"
     },
     {
-      title: "Manejo de Limpieza",
-      description: "Asigna y supervisa las tareas de aseo para cada habitación. Asegura que todo esté impecable antes del check-in y mejora la coordinación de tu equipo.",
+      title: "Gestión de Roles",
+      description: "Crea distintos tipos de usuarios para tu recinto y asigna permisos según sus funciones. Administra administradores, recepcionistas y personal operativo con acceso a las herramientas que realmente necesitan.",
       icon: <Sparkles className="w-6 h-6 text-primary-300" />,
-      imageAlt: "Módulo de limpieza"
-    },
+      imageAlt: "Gestión de roles y usuarios"
+    },  
     {
       title: "Automatización y Mensajería",
       description: "Conecta y notifica a tus huéspedes vía WhatsApp. Configura bots automatizados para enviar confirmaciones, recordatorios y responder consultas frecuentes.",
