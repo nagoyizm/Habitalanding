@@ -79,6 +79,20 @@ export function Features() {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Arrow to next section */}
+        <div className="flex justify-center mt-10">
+          <a
+            href="#pricing"
+            className="text-stone-300 hover:text-primary-500 transition-colors block p-2"
+            aria-label="Ir a la siguiente sección"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce hover:scale-110 transition-transform">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </a>
+        </div>
+
       </div>
     </section>
   );

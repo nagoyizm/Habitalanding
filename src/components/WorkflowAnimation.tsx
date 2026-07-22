@@ -134,23 +134,24 @@ export function WorkflowAnimation() {
   const cursor = getCursorStyle();
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden relative">
+    <section id="workflow" className="scroll-mt-16 md:scroll-mt-20 py-16 md:py-24 bg-white overflow-hidden relative">
       <style dangerouslySetInnerHTML={{ __html: `
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
       `}} />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="font-heading text-3xl md:text-5xl font-bold text-stone-900 mb-4">
-            Un Flujo limpio
-          </h2>
-        </div>
 
         <div className="w-full overflow-x-auto scrollbar-hide pb-8">
           
           <div className="w-[1000px] md:w-full max-w-6xl mx-auto bg-stone-50 rounded-3xl shadow-xl border border-stone-200 p-8 md:p-12 relative overflow-hidden">
+
+            {/* Title inside the container */}
+            <div className="text-center mb-10 md:mb-14">
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-stone-900 mb-4">
+                Un Flujo limpio
+              </h2>
+            </div>
             
             {/* Animated Cursor */}
             <div className={cursor.base} style={cursor.style}>
@@ -377,6 +378,19 @@ export function WorkflowAnimation() {
 
             </div>
           </div>
+        </div>
+
+        {/* Arrow to next section */}
+        <div className="flex justify-center mt-8">
+          <a
+            href="#features"
+            className="text-stone-300 hover:text-primary-500 transition-colors block p-2"
+            aria-label="Ir a la siguiente sección"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce hover:scale-110 transition-transform">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </a>
         </div>
 
       </div>
