@@ -111,21 +111,21 @@ export function WorkflowAnimation() {
     };
     
     if (targetNode === 0) {
-      style.left = '-10%'; style.top = '5rem'; style.opacity = 0;
+      style.left = '-10%'; style.top = '11.5rem'; style.opacity = 0;
     } else if (targetNode === 1) {
-      style.left = '12.5%'; style.top = '5rem'; style.opacity = 1;
+      style.left = '12.5%'; style.top = '11.5rem'; style.opacity = 1;
     } else if (targetNode === 1.5) { // Empieza drag en calendario
-      style.left = '8%'; style.top = '12rem'; style.opacity = 1;
+      style.left = '7.5%'; style.top = '22.8rem'; style.opacity = 1;
     } else if (targetNode === 1.6) { // Termina drag
-      style.left = '16%'; style.top = '12rem'; style.opacity = 1;
+      style.left = '20%'; style.top = '22.8rem'; style.opacity = 1;
     } else if (targetNode === 2) {
-      style.left = '37.5%'; style.top = '5rem'; style.opacity = 1;
+      style.left = '37.5%'; style.top = '11.5rem'; style.opacity = 1;
     } else if (targetNode === 3) {
-      style.left = '62.5%'; style.top = '5rem'; style.opacity = 1;
+      style.left = '62.5%'; style.top = '11.5rem'; style.opacity = 1;
     } else if (targetNode === 4) {
-      style.left = '87.5%'; style.top = '5rem'; style.opacity = 1;
+      style.left = '87.5%'; style.top = '11.5rem'; style.opacity = 1;
     } else if (targetNode === 5) {
-      style.left = '110%'; style.top = '10rem'; style.opacity = 0;
+      style.left = '110%'; style.top = '15rem'; style.opacity = 0;
     }
 
     return { base, style };
